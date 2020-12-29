@@ -1,0 +1,4 @@
+numpy==1.19.3
+keras==2.1.5
+tensorflow==2.2.0
+tkinter
