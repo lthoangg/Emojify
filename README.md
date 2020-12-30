@@ -1,6 +1,8 @@
 # Machine Learning Project - USTH 2020-2021 - Emojify
 
 ## Instructions
+We use _Python 3.8.7_ with _numpy_, _keras_ and _tensorflow_ with specifically version.
+
 1. Setup
 ```pip install -r requirements.txt```
 
