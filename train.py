@@ -6,7 +6,6 @@ from tensorflow.keras.layers import Conv2D
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import MaxPooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
 train_dir = 'data/train'
 val_dir = 'data/validate'
 train_datagen = ImageDataGenerator(rescale=1./255)
@@ -50,7 +49,7 @@ emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutra
 
 
 emotion_model.compile(loss='categorical_crossentropy',optimizer=Adam(lr=0.0001, decay=1e-6),metrics=['accuracy'])
-emotion_model_info = emotion_model.fit_generator(
+emotion_model_info = emotion_model.fit(
         train_generator,
         steps_per_epoch=28709 // 64,
         epochs=50,
